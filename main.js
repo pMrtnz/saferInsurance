@@ -95,8 +95,8 @@ let arrayClientes = [cliente1, cliente2, cliente3, cliente4];
 // Imprimo x Consola
 console.log(arrayClientes[0].infoCliente());
 
-let obj1 = {id: 1, name: prompt('Ingrese su nombre')};
+let nombreCalculo = {id: 1, name: prompt('Ingrese su nombre')};
 
 let parrafo = document.createElement("p");
-parrafo.innerHTML = `<h1> Calcula tu Seguro, ${obj1.name}.</h1>"`
+parrafo.innerHTML = `<h1> Calcula tu Seguro, ${nombreCalculo.name}.</h1>"`
 document.body.appendChild(parrafo);
