@@ -14,12 +14,12 @@ else {
 }
 
 
-const resultado = mensaje => console.log('El precio final de tu seguro es de: ', mensaje * 15);
+const resultado = mensaje => console.log('El precio final de tu seguro es de: ', mensaje);
 
 var price = prompt('Ingresa el valor de tu auto');
 
 function calcularSeguro (price, year){
-    let precioFinal = (price / year);
+    let precioFinal = (price / year) * 15;
     return precioFinal;
 }
 
@@ -94,3 +94,9 @@ let arrayClientes = [cliente1, cliente2, cliente3, cliente4];
 
 // Imprimo x Consola
 console.log(arrayClientes[0].infoCliente());
+
+let obj1 = {id: 1, name: prompt('Ingrese su nombre')};
+
+let parrafo = document.createElement("p");
+parrafo.innerHTML = `<h1> Calcula tu Seguro, ${obj1.name}.</h1>"`
+document.body.appendChild(parrafo);
