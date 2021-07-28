@@ -1,0 +1,88 @@
+/* Generales */
+*{
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    overflow-x: hidden;
+}
+span{
+    color: #FDCE62;
+}
+
+/* Navbar */
+.navbar-dark .navbar-nav .nav-link,
+.navbar-brand{
+    color: white;
+    padding: 30px;
+}
+
+.logo_mod{
+    height: 100px;
+    width: 100px;
+}
+
+.nav__mod{
+    background-color: #000;
+}
+
+.navbar-nav,
+.ms-auto {
+    align-items: center;
+    text-align: center;
+}
+
+
+/* Banner/Slogan */
+.slogan{
+    position: relative;
+    bottom: 550px; right: 225px;
+    color: white;
+}
+
+.container-banner{
+    background-color: #000;
+}
+
+.q__mod{
+    margin-top: 40px;
+    position: relative;
+    bottom: 90px;
+}
+
+.icons__anim {
+    transition: 300ms; 
+}
+  
+.icons__anim:hover {
+    transform: translateY(-15px); 
+}
+
+
+/* Body */
+.img-sl{
+    margin-top: 200px;
+    margin-left: 50px;
+}
+
+.img-shadow{
+    box-shadow: 13px 13px 9px -6px rgba(34,28,28,0.6);
+    -webkit-box-shadow: 13px 13px 9px -6px rgba(34,28,28,0.6);
+    -moz-box-shadow: 13px 13px 9px -6px rgba(34,28,28,0.6);
+}
+
+.img__text{
+    font-size: 50px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+.wh_mod{
+    margin-top: 180px;
+    margin-bottom: 80px;
+    text-align: center;
+
+}
