@@ -1,34 +1,3 @@
-let car = prompt('Ingresá tu modelo de auto');
-let year = prompt('Ingresá el año');
-    console.log('El modelo de tu auto es: ' + car + ' ' + year);
-
-
-if (year >= 2016) {
-    console.log('Tu auto es nuevo');
-}
-else if (year > 2000){
-    console.log('Tu auto es "viejo"');
-}
-else {
-    console.log('Tu auto es bastante viejo');
-}
-
-
-const resultado = mensaje => console.log('El precio final de tu seguro es de: ', mensaje);
-
-var price = prompt('Ingresa el valor de tu auto');
-
-function calcularSeguro (price, year){
-    let precioFinal = (price / year) * 15;
-    return precioFinal;
-}
-
-let precioFinal = calcularSeguro(price, year);
-
-
-resultado(precioFinal);
-
-
 // Creacion de Clase
 class Cliente {
     constructor (brand, model, year, price, owner, adress) {
@@ -95,8 +64,4 @@ let arrayClientes = [cliente1, cliente2, cliente3, cliente4];
 // Imprimo x Consola
 console.log(arrayClientes[0].infoCliente());
 
-let nombreCalculo = {id: 1, name: prompt('Ingrese su nombre')};
 
-let parrafo = document.createElement("p");
-parrafo.innerHTML = `<h1> Calcula tu Seguro, ${nombreCalculo.name}.</h1>"`
-document.body.appendChild(parrafo);

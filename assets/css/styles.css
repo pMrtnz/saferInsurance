@@ -84,5 +84,55 @@ span{
     margin-top: 180px;
     margin-bottom: 80px;
     text-align: center;
+}
 
+.calcSeg{
+    margin-top: 100px;
+}
+
+.calcName{
+    font-weight: 700;
+    margin-top: 180px;
+    margin-bottom: 20px;
+}
+
+.calcP{
+    margin-bottom: 75px;
+    font-style: italic;
+}
+
+.inputCalt__mod{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.btn-grad {
+    background-image: linear-gradient(to right, #FFB75E 0%, #ED8F03  51%, #FFB75E  100%);
+    text-decoration: none;
+    margin-top: px;
+}
+
+.btn-grad {
+   margin-top: 75px;
+   padding: 15px 45px 15px 45px;
+   text-align: center;
+   text-transform: uppercase;
+   transition: 0.8s;
+   background-size: 200% auto;
+   color: white;            
+   box-shadow: 0 0 20px #eee;
+   border-radius: 10px;
+   display: block;
+}
+
+ .btn-grad:hover {
+   background-position: right center; 
+   color: #fff;
+   text-decoration: none;
+}
+
+.datosIngresados{
+    margin-top: 50px;
 }
