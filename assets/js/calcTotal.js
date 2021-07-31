@@ -10,3 +10,24 @@ segResult.innerHTML =
      <p class="container datosIngresados"> El valor de su seguro es de: <strong>${(insertCar.value / insertCar.year) * 15}</strong>`;
 
 document.body.appendChild(segResult);
+
+
+// Prueba
+
+const formulario = document.getElementById("form");
+
+const obtenerDatos (carInput, yearInput, valueInput) = {
+    const carInput = document.getElementById("formCar").value;
+    const yearInput = document.getElementById("formYear").value;
+    const valueInput = document.getElementById("formValue").value;
+};
+
+const validarDatos (carInput, yearInput, valueInput) = {
+    
+}
+
+
+const marcas = [Chevrolet, Audi, Fiat];
+
+
+console.log(carInput.value)
