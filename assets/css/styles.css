@@ -125,6 +125,7 @@ span{
    box-shadow: 0 0 20px #eee;
    border-radius: 10px;
    display: block;
+   border: 0;
 }
 
  .btn-grad:hover {
