@@ -1,33 +1,28 @@
-//Creacion de Elementos
-
-let insertCar = {id: 1, model: prompt('Ingresá el modelo de tu auto'), year: prompt('Ingresá el año'), value: prompt('Ingresa el valor de tu auto')};
-
-let segResult = document.createElement("div");
-segResult.innerHTML = 
-    `<p class="container datosIngresados"> Su modelo: <strong>${insertCar.model}</strong> </p>
-     <p class="container datosIngresados"> El año de su vehiculo: <strong>${insertCar.year}</strong> </p>
-     <p class="container datosIngresados"> El valor de su vehiculo: <strong>${insertCar.value}</strong> </p>
-     <p class="container datosIngresados"> El valor de su seguro es de: <strong>${(insertCar.value / insertCar.year) * 15}</strong>`;
-
-document.body.appendChild(segResult);
-
-
 // Prueba
-
 const formulario = document.getElementById("form");
+const btnSubmit = document.getElementById("btnCargar");
 
-const obtenerDatos (carInput, yearInput, valueInput) = {
+function enviarDatos() {
     const carInput = document.getElementById("formCar").value;
     const yearInput = document.getElementById("formYear").value;
     const valueInput = document.getElementById("formValue").value;
+
+    const datos = document.createElement('div');
+
+    datos.className = "container datosIngresados";
+
+    datos.innerHTML =
+    `<p> Su modelo: <strong>${carInput}</strong> </p>
+    <p> El año de su vehiculo: <strong>${yearInput}</strong> </p>
+    <p> El valor de su vehiculo: <strong>${valueInput}</strong> </p>
+    <p> El valor de su seguro es de: <strong>${(valueInput / yearInput) * 15}</strong>`;
+
+    document.btnCargar.appendChild(datos);
 };
 
-const validarDatos (carInput, yearInput, valueInput) = {
-    
-}
+btnSubmit.onsubmit = (event) => {
+    event.preventDefault();
+    enviarDatos();
+};
 
-
-const marcas = [Chevrolet, Audi, Fiat];
-
-
-console.log(carInput.value)
+console.log(btnSubmit);
