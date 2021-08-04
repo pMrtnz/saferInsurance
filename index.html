@@ -142,30 +142,28 @@
             </div>
             <div class="row mt-5">
                 <div class="form-outline col-12">
-                    <input type="number" id="formYear" class="form-control" aria-describedby="textExample1"/>
+                    <input type="number" id="formYear" class="form-control" aria-describedby="textExample1" min="1970" max="2021"/>
                 </div>
                 <div id="textExample1" class="form-text">Ingrese el año de su auto.</div>
             </div>
             <div class="row mt-5">
                 <div class="form-outline col-12">
-                    <input type="number" id="formValue" class="form-control" aria-describedby="textExample1"/>
+                    <input type="number" id="formValue" class="form-control" aria-describedby="textExample1" min="200000" max="10000000"/>
                 </div>
                 <div id="textExample1" class="form-text">Ingrese el valor de su auto.</div>
             </div>
 
+            <div id="datosForm"></div>
+            
             <div class="row">
-                <button id="btnCargar" class="btn-grad" type="submit">Cotizar</button>
+                <button id="btnEnviar" class="btn-grad" type="submit">Cotizar</button>
             </div>
         </form>
     </div>
 
-    <div id="datosForm"></div>
-
     
 
     <br><br><br>
-
-
 
     <!-- JS -->
     <script src="assets/js/calcName.js"></script>
