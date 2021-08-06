@@ -130,11 +130,22 @@
         </div>
     </div>
 
-    <div id="nameDom"></div>
+    <div class="container">
+        <div class="row">
+            <h1 class="container calcName"><span>¡</span>Cotizá tu seguro<span>!</span></h1>
+            <p class="container calcP">No te encuentres con un precio sorpresivo. En <strong>Safer</strong> nuestros seguros son transparentes y claros.</p>
+        </div>
+    </div>
 
     <div class="container gradientCalc">
         <form id="form">
             <div class="row">
+                <div class="form-outline col-12">
+                    <input type="text" id="formName" class="form-control" aria-describedby="textExample1"/>
+                </div>
+                <div id="textExample1" class="form-text">Ingrese su nombre.</div>
+            </div>
+            <div class="row mt-5">
                 <div class="form-outline col-12">
                     <input type="text" id="formCar" class="form-control" aria-describedby="textExample1"/>
                 </div>
@@ -162,11 +173,10 @@
     </div>
 
     
-
-    <br><br><br>
+    <br><br><br><br>
 
     <!-- JS -->
-    <script src="assets/js/calcName.js"></script>
+    <!-- <script src="assets/js/calcName.js"></script> -->
     <script src="assets/js/calcTotal.js"></script>
 
     <!-- Bootstrap -->
