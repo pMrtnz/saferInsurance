@@ -115,7 +115,7 @@ span{
 }
 
 .btn-grad {
-   margin-top: 75px;
+   margin-top: 65px;
    padding: 15px 45px 15px 45px;
    text-align: center;
    text-transform: uppercase;
@@ -135,5 +135,9 @@ span{
 }
 
 .datosIngresados{
-    margin-top: 50px;
+    margin-top: 75px;
+}
+
+.totalFont{
+    font-size: 1.3rem;
 }

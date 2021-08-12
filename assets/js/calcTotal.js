@@ -1,32 +1,70 @@
+$(document).ready(function(){
 
-const formulario = document.getElementById("form");
-const btnSubmit = document.getElementById("btnEnviar");
-const obtenerDatos = document.getElementById("datosForm");
-const nameInput = document.getElementById("formName");
-const carInput = document.getElementById("formCar");
-const yearInput = document.getElementById("formYear");
-const valueInput = document.getElementById("formValue");
+    //Selecciono los elementos
+    const form = $('#form');
+    const inputName = $('#formName');
+    const inputCar = $('#formCar');
+    const inputYear = $('#formYear');
+    const inputValue = $('#formValue');
+
+    //Creacion del objeto
+    function Client (name, car, year, value) {
+        this.name = name;
+        this.car = car;
+        this.year = year;
+        this.value = value;
+    };
+
+    let listClient = [];
+
+    if (localStorage.getItem('clients')) {
+        listClient = JSON.parse(localStorage.getItem('clients'));
+    };
+
+    function saveInStorage(key, clients) {
+        listClient.push(clients);
+        localStorage.setItem(key, JSON.stringify(listClient));
+    };
+
+    function getClientFromStorage(key) {
+        if(localStorage.getItem(key)){
+            return JSON.parse(localStorage.getItem(key));
+        }
+    }
 
 
-formulario.onsubmit = function enviarDatos(e) {
-    e.preventDefault();
-    
-    const datos = document.createElement('div');
+    form.submit(function(event) {
+        event.preventDefault();
 
-    datos.className = "container datosIngresados";
+        //Valores ingresados por el usuario
+        const name = inputName.val();
+        const car = inputCar.val();
+        const year = inputYear.val();
+        const value = inputValue.val();
+        
+        
+        const user = new Client(name, car, year, value);
 
-    datos.innerHTML =
-    `<p><span><strong>${nameInput.value}</strong></span>, a continuación te detallamos el valor de tu seguro:</p>
-    <p>• Su modelo: <strong>${carInput.value}</strong> </p>
-    <p>• El año de su vehiculo: <strong>${yearInput.value}</strong> </p>
-    <p>• El valor de su vehiculo: <strong>$ ${valueInput.value}</strong> </p>
-    <p>• El valor de su seguro es de: <strong>$ ${Number.parseInt((valueInput.value / yearInput.value))* 15}</strong>`;
+        saveInStorage('clients', user);
 
-    obtenerDatos.appendChild(datos);
-    
-    localStorage.setItem('Cliente:', nameInput.value);
-    localStorage.setItem('Auto del Cliente:', carInput.value);
-    localStorage.setItem('Año del auto del Cliente:', yearInput.value);
-    localStorage.setItem('Valor del Vehiculo:', valueInput.value);
-    localStorage.setItem('Valor del Seguro:', Number.parseInt((valueInput.value / yearInput.value))* 15); 
-};
+
+        if(name, car, year, value == ''){
+            $("#datosForm").append(`
+            <div class="alert alert-danger text-center datosIngresados" role="alert">
+                <p>¡No completaste todos los campos del formulario!</p>
+            </div>
+            `)
+        }
+        else{
+            $("#datosForm").append(`
+                <div class="datosIngresados">
+                <p><span><strong>${user.name}</strong></span>, a continuación te detallamos el valor de tu seguro:</p>
+                <p>• Su modelo: <strong>${user.car}</strong></p>
+                <p>• El año de su vehiculo: <strong>${user.year}</strong></p>
+                <p>• El valor final su seguro será de: <span class="totalFont"><strong>$ ${Number.parseInt((user.value / user.year))* 15}</strong></span>
+                </div>
+            `)
+        }
+    });
+
+});
