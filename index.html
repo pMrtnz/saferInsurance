@@ -21,6 +21,9 @@
 
     <!-- AOS -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- FontAwesome -->
+    <script src="https://kit.fontawesome.com/673a8ce1fa.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -33,11 +36,11 @@
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse fs-5" id="navbarNavAltMarkup">
-            <div class="navbar-nav ms-auto px-3 fw-light li__mod">
+            <div class="navbar-nav ms-auto px-3 fw-light">
               <a class="nav-link" aria-current="page" href="#">Inicio</a>
-              <a class="nav-link" href="#">Planes</a>
-              <a class="nav-link" href="#">Quienes Somos</a>
-              <a class="nav-link" href="#">Contacto</a>
+              <a class="nav-link" href="assets/pages/planes.html">Planes</a>
+              <a class="nav-link" href="assets/pages/nosotros.html">Quienes Somos</a>
+              <a class="nav-link" href="assets/pages/contacto.html">Contacto</a>
             </div>
           </div>
         </div>
@@ -52,10 +55,10 @@
     <div class="container">
         <div class="row slogan">
             <div class="col-12">
-                <p class="fw-bold display-1">Safer Insurance</p>
+                <p class="fw-bold display-1" data-aos="fade-down" data-aos-duration="3000">Safer Insurance</p>
             </div>
             <div class="col-12">
-                <p class="fst-italic fw-light fs-5"><span>El mejor seguro para tu auto esta acá</span></p>
+                <p class="fst-italic fw-light fs-5" data-aos="fade-right" data-aos-duration="3000"><span>El mejor seguro para tu auto esta acá</span></p>
             </div>
         </div>
     </div>
@@ -89,7 +92,7 @@
         </div>
     </div>
     
-    <div class="container-fluid gradient">
+    <div class="container-fluid gradient" id="backgroundImg">
         <div class="row img-sl">
             <div class="col-4">
                 <img class="img-fluid img-shadow" src="assets/img/carpic1.jpg" alt="car1" data-aos="fade-right" data-aos-duration="1500">
@@ -132,8 +135,8 @@
 
     <div class="container">
         <div class="row">
-            <h1 class="container calcName"><span>¡</span>Cotizá tu seguro<span>!</span></h1>
-            <p class="container calcP">No te encuentres con un precio sorpresivo. En <strong>Safer</strong> nuestros seguros son transparentes y claros.</p>
+            <h1 class="container calcName" data-aos="fade-up-right" data-aos-duration="1700"><span>¡</span>Cotizá tu seguro<span>!</span></h1>
+            <p class="container calcP" data-aos="fade-up-right" data-aos-duration="1700">No te encuentres con un precio sorpresivo. En <strong>Safer</strong> nuestros seguros son transparentes y claros.</p>
         </div>
     </div>
 
@@ -173,7 +176,75 @@
     </div>
 
     
-    <br><br><br><br>
+    <div class="mt-5">
+        <footer class="text-white text-center text-lg-start" style="background-color: #23242a;">
+            <div class="container p-4"> 
+                <div class="row mt-4">
+                    <div class="col-lg-4 col-md-12 mb-4 mb-md-0 text-center">
+                        <div class="text-uppercase mt-3"><h5>Safer Insurance</h5></div>
+
+                        <img src="assets/img/logo1.png" alt="logoFooter" class="logo_mod m-3">
+                        
+                        <div class="mt-4">
+                          <a type="button" class="btnFooter btn btn-floating btn-warning btn-lg"><i class="fab fa-facebook-f"></i></a>
+                          
+                          <a type="button" class="btnFooter btn btn-floating btn-warning btn-lg" style="margin-left: 30px;"><i class="fab fa-instagram"></i></a>
+                          
+                          <a type="button" class="btnFooter btn btn-floating btn-warning btn-lg" style="margin-left: 30px;"><i class="fab fa-twitter"></i></a>
+                          
+                          <a type="button" class="btnFooter btn btn-floating btn-warning btn-lg" style="margin-left: 30px;" href="https://github.com/pMrtnz/"><i class="fab fa-github"></i></a>
+                        </div>
+                      </div>
+                      
+
+                      <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+                        <ul class="fa-ul" style="margin-left: 1.65em;">
+                          <li class="mt-3 mb-4">
+                            <span class="fa-li"><i class="fas fa-home"></i></span><span class="ms-2">Buenos Aires, Argentina</span>
+                          </li>
+                          <li class="mb-4">
+                            <span class="fa-li"><i class="fas fa-envelope"></i></span><span class="ms-2">saferinsurance@gmail.com</span>
+                          </li>
+                          <li class="mb-4">
+                            <span class="fa-li"><i class="fas fa-phone"></i></span><span class="ms-2">0800 555 7524</span>
+                          </li>
+                          <li class="mb-4">
+                            <span class="fa-li"><i class="fas fa-phone"></i></span><span class="ms-2">0800 555 6234</span>
+                          </li>
+                        </ul>
+                      </div>
+                      
+
+                      <div class="col-lg-4 col-md-6 mb-4 mb-md-0 mt-3">
+                        <h5 class="text-uppercase mb-4">Horarios de Asistencia</h5>
+              
+                        <table class="table text-center text-white">
+                          <tbody class="font-weight-normal">
+                            <tr>
+                              <td>Lun - Jue:</td>
+                              <td>24hs</td>
+                            </tr>
+                            <tr>
+                              <td>Vie - Sab:</td>
+                              <td>24hs</td>
+                            </tr>
+                            <tr>
+                              <td>Domingos:</td>
+                              <td>6am - 22pm</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+      
+            <div class="text-center p-3 footerCopy">
+            © 2021 Copyright:
+            <a class="text-white" href="https://www.linkedin.com/in/patricio-martinez10/">Patricio Martinez</a>
+            </div>
+      </footer>
+        
+      </div>
 
     
     <!-- Bootstrap -->
