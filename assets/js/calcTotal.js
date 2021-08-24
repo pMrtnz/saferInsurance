@@ -6,6 +6,7 @@ $(document).ready(function(){
     const inputCar = $('#formCar');
     const inputYear = $('#formYear');
     const inputValue = $('#formValue');
+    const insureTotal = (inputValue/inputYear);
 
     //Creacion del objeto
     function Client (name, car, year, value) {
@@ -50,21 +51,33 @@ $(document).ready(function(){
 
         if(name, car, year, value == ''){
             $("#datosForm").append(`
-            <div class="alert alert-danger text-center datosIngresados" role="alert">
+            <div class="alert alert-danger text-center datosIngresados" role="alert" data-aos="fade-up">
                 <p>¡No completaste todos los campos del formulario!</p>
             </div>
             `)
         }
         else{
             $("#datosForm").append(`
-                <div class="datosIngresados">
+            <div class="datosIngresados" data-aos="fade-down" data-aos-duration="1000">
                 <p><span><strong>${user.name}</strong></span>, a continuación te detallamos el valor de tu seguro:</p>
-                <p>• Su modelo: <strong>${user.car}</strong></p>
-                <p>• El año de su vehiculo: <strong>${user.year}</strong></p>
-                <p>• El valor final su seguro será de: <span class="totalFont"><strong>$ ${Number.parseInt((user.value / user.year))* 15}</strong></span>
+                <p>El valor que aparecera a continuacion es el que corresponde a nuestro plan <strong>Estándar</strong>. Podrá consultar el valor de nuestros otros planes en base a su vehiculo, en la seccion de "Planes".</p>
+                <div class="wrapper">
+                    <div class="divider div-transparent div-dot"></div>
                 </div>
+                <p class="resultadoForm">Su modelo: <strong>${user.car}</strong></p>
+                <p class="mt-5">El año de su vehiculo: <strong>${user.year}</strong></p>
+                <p class="mt-5">El valor final su seguro será de: <span class="totalFont"><strong>$ ${Number.parseInt((user.value / user.year))* 15}</strong></span>
+            </div>
             `)
         }
+        
+        $("#cardEstandar").append(`
+        <div>
+            <p><span>${Number.parseInt((Client.value / Client.year))* 15}<span></p>
+        </div>
+        `)
     });
+
+    
 
 });
