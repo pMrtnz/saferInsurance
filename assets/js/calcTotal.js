@@ -6,7 +6,6 @@ $(document).ready(function(){
     const inputCar = $('#formCar');
     const inputYear = $('#formYear');
     const inputValue = $('#formValue');
-    const insureTotal = (inputValue/inputYear);
 
     //Creacion del objeto
     function Client (name, car, year, value) {
@@ -49,7 +48,7 @@ $(document).ready(function(){
         saveInStorage('clients', user);
 
 
-        if(name, car, year, value == ''){
+        if(name == '' && car == '' && year == '' && value == ''){
             $("#datosForm").append(`
             <div class="alert alert-danger text-center datosIngresados" role="alert" data-aos="fade-up">
                 <p>¡No completaste todos los campos del formulario!</p>
@@ -60,22 +59,41 @@ $(document).ready(function(){
             $("#datosForm").append(`
             <div class="datosIngresados" data-aos="fade-down" data-aos-duration="1000">
                 <p><span><strong>${user.name}</strong></span>, a continuación te detallamos el valor de tu seguro:</p>
-                <p>El valor que aparecera a continuacion es el que corresponde a nuestro plan <strong>Estándar</strong>. Podrá consultar el valor de nuestros otros planes en base a su vehiculo, en la seccion de "Planes".</p>
+                <p>El valor que aparecera a continuacion es el que corresponde a nuestro plan <strong>Estándar</strong>. Podrá consultar el valor de nuestros otros planes debajo, en la seccion "Nuestros Planes".</p>
                 <div class="wrapper">
                     <div class="divider div-transparent div-dot"></div>
                 </div>
                 <p class="resultadoForm">Su modelo: <strong>${user.car}</strong></p>
                 <p class="mt-5">El año de su vehiculo: <strong>${user.year}</strong></p>
-                <p class="mt-5">El valor final su seguro será de: <span class="totalFont"><strong>$ ${Number.parseInt((user.value / user.year))* 15}</strong></span>
+                <p class="mt-5">El valor final su seguro será de: <span class="totalFont"><strong>$ ${Number.parseInt((user.value / user.year))* 15}</strong></span>.</p>
+            </div>
+            `)
+            $('.planes').fadeIn();
+
+            $("#cardEstandar").append(`
+            <div>
+                <p>$<span class="totalCards">${Number.parseInt((user.value / user.year))* 15}</span>/mes</p>
+            </div>
+            `)
+
+            $("#cardBase").append(`
+            <div>
+                <p>$<span class="totalCards">${Number.parseInt((user.value / user.year))* 18}</span>/mes</p>
+            </div>
+            `)
+
+            $("#cardFull").append(`
+            <div>
+                <p>$<span class="totalCards">${Number.parseInt((user.value / user.year))* 21}</span>/mes</p>
+            </div>
+            `)
+
+            $("#cardSafest").append(`
+            <div>
+                <p>$<span class="totalCards">${Number.parseInt((user.value / user.year))* 24}</span>/mes</p>
             </div>
             `)
         }
-        
-        $("#cardEstandar").append(`
-        <div>
-            <p><span>${Number.parseInt((Client.value / Client.year))* 15}<span></p>
-        </div>
-        `)
     });
 
     

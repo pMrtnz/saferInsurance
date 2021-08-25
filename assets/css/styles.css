@@ -168,6 +168,13 @@ span{
 #last-of-type{
     margin-bottom: 150px;
 }
+.imgForm{
+    margin-right: 150px;
+}
+.totalCards{
+    font-size: 48px;
+    font-weight: bold;
+}
 /* Footer */
 .footerCopy{
     background-color: rgba(0, 0, 0, 0.2);
