@@ -6,6 +6,7 @@ $(document).ready(function(){
     const inputCar = $('#formCar');
     const inputYear = $('#formYear');
     const inputValue = $('#formValue');
+    const usdBlue = "https://www.dolarsi.com/api/api.php?type=valoresprincipales"
 
     //Creacion del objeto
     function Client (name, car, year, value) {
@@ -33,7 +34,7 @@ $(document).ready(function(){
     }
 
 
-    form.submit(function(event) {
+    $('#btnEnviar').click(function(event) {
         event.preventDefault();
 
         //Valores ingresados por el usuario
@@ -41,7 +42,6 @@ $(document).ready(function(){
         const car = inputCar.val();
         const year = inputYear.val();
         const value = inputValue.val();
-        
         
         const user = new Client(name, car, year, value);
 
@@ -70,32 +70,60 @@ $(document).ready(function(){
             `)
             $('.planes').fadeIn();
 
-            $("#cardEstandar").append(`
-            <div>
-                <p>$<span class="totalCards">${Number.parseInt((user.value / user.year))* 15}</span>/mes</p>
-            </div>
-            `)
+            $.get(usdBlue,function(datos){
+                let estandarValue;
+                $('#cardEstandar').append(`
+                <div>
+                    <p>$<span class="totalCards">${estandarValue = (Number.parseInt((user.value / user.year))* 15)}</span>/mes</p>
+                </div>
+                <div>
+                    <p>El valor de tu seguro en U$D Oficial: <strong>$ ${Number.parseInt(estandarValue / (Number.parseInt(datos[0].casa.venta)))}</strong></p>
+                    <p>El valor de tu seguro en U$D Blue: <strong>$ ${Number.parseInt(estandarValue / (Number.parseInt(datos[1].casa.venta)))}</strong></p>
+                </div>
+                `)
+            });
 
-            $("#cardBase").append(`
-            <div>
-                <p>$<span class="totalCards">${Number.parseInt((user.value / user.year))* 18}</span>/mes</p>
-            </div>
-            `)
 
-            $("#cardFull").append(`
-            <div>
-                <p>$<span class="totalCards">${Number.parseInt((user.value / user.year))* 21}</span>/mes</p>
-            </div>
-            `)
+            $.get(usdBlue,function(datos){
+                let baseValue;
+                $('#cardBase').append(`
+                <div>
+                    <p>$<span class="totalCards">${baseValue = (Number.parseInt((user.value / user.year))* 18)}</span>/mes</p>
+                </div>
+                <div>
+                    <p>El valor de tu seguro en U$D Oficial: <strong>$ ${Number.parseInt(baseValue / (Number.parseInt(datos[0].casa.venta)))}</strong></p>
+                    <p>El valor de tu seguro en U$D Blue: <strong>$ ${Number.parseInt(baseValue / (Number.parseInt(datos[1].casa.venta)))}</strong></p>
+                </div>
+                `)
+            });
 
-            $("#cardSafest").append(`
-            <div>
-                <p>$<span class="totalCards">${Number.parseInt((user.value / user.year))* 24}</span>/mes</p>
-            </div>
-            `)
-        }
+
+            $.get(usdBlue,function(datos){
+                let fullValue;
+                $('#cardFull').append(`
+                <div>
+                    <p>$<span class="totalCards">${fullValue = (Number.parseInt((user.value / user.year))* 21)}</span>/mes</p>
+                </div>
+                <div>
+                    <p>El valor de tu seguro en U$D Oficial: <strong>$ ${Number.parseInt(fullValue / (Number.parseInt(datos[0].casa.venta)))}</strong></p>
+                    <p>El valor de tu seguro en U$D Blue: <strong>$ ${Number.parseInt(fullValue / (Number.parseInt(datos[1].casa.venta)))}</strong></p>
+                </div>
+                `)
+            });
+
+
+            $.get(usdBlue,function(datos){
+                let safestValue;
+                $('#cardSafest').append(`
+                <div>
+                    <p>$<span class="totalCards">${safestValue = (Number.parseInt((user.value / user.year))* 24)}</span>/mes</p>
+                </div>
+                <div>
+                    <p>El valor de tu seguro en U$D Oficial: <strong>$ ${Number.parseInt(safestValue / (Number.parseInt(datos[0].casa.venta)))}</strong></p>
+                    <p>El valor de tu seguro en U$D Blue: <strong>$ ${Number.parseInt(safestValue / (Number.parseInt(datos[1].casa.venta)))}</strong></p>
+                </div>
+                `)
+            });
+        };
     });
-
-    
-
 });
