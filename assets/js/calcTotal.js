@@ -34,7 +34,7 @@ $(document).ready(function(){
     }
 
 
-    $('#btnEnviar').click(function(event) {
+    form.submit(function(event) {
         event.preventDefault();
 
         //Valores ingresados por el usuario
