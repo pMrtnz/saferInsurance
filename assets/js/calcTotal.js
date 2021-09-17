@@ -48,18 +48,18 @@ $(document).ready(function(){
         saveInStorage('clients', user);
 
 
-        if(name == '' && car == '' && year == '' && value == ''){
-            $("#datosForm").append(`
+        if(name, car, year, value == ''){
+            $("#datosForm").html(`
             <div class="alert alert-danger text-center datosIngresados" role="alert" data-aos="fade-up">
                 <p>¡No completaste todos los campos del formulario!</p>
             </div>
             `)
         }
         else{
-            $("#datosForm").append(`
+            $("#datosForm").html(`
             <div class="datosIngresados" data-aos="fade-down" data-aos-duration="1000">
                 <p><span><strong>${user.name}</strong></span>, a continuación te detallamos el valor de tu seguro:</p>
-                <p>El valor que aparecera a continuacion es el que corresponde a nuestro plan <strong>Estándar</strong>. Podrá consultar el valor de nuestros otros planes debajo, en la seccion "Nuestros Planes".</p>
+                <p>El valor que aparecerá a continuación es el que corresponde a nuestro plan <strong>Estándar</strong>. Podrá consultar el valor de nuestros otros planes debajo, en la sección "Nuestros Planes".</p>
                 <div class="wrapper">
                     <div class="divider div-transparent div-dot"></div>
                 </div>
@@ -68,11 +68,35 @@ $(document).ready(function(){
                 <p class="mt-5">El valor final su seguro será de: <span class="totalFont"><strong>$ ${Number.parseInt((user.value / user.year))* 15}</strong></span>.</p>
             </div>
             `)
-            $('.planes').fadeIn();
+
+            $(".planes").show();
 
             $.get(usdBlue,function(datos){
                 let estandarValue;
-                $('#cardEstandar').append(`
+                $('#cardEstandar').html(`
+                <div class="card-body">
+                    <p class="card-text mt-5">Te cubrimos cualquier situacion ante responsabilidad civil.</p>
+                    <a href="#" class="btn btn-warning btn-card">Contratar Online</a>
+                </div>
+                <div class="card-body">
+                    <p class="mt-5 card-plan">Este plan incluye:</p>
+                    <ul class="mt-4"">
+                        <li class="card-li">Beneficios Safer</li>
+                        <li class="mt-2 card-li">Responsabilidad Civil</li>
+                    </ul>
+
+                    <p class="mt-5 card-plan">Este plan no incluye:</p>
+                    <ul class="mt-4">
+                        <li class="card-li">Daños parciales con franquicia</li>
+                        <li class="mt-2 card-li">Robo e incendio parcial</li>
+                        <li class="mt-2 card-li">Incendio, daños y robo total</li>
+                        <li class="mt-2 card-li">Cristales</li>
+                        <li class="mt-2 card-li">Cerradura</li>
+                        <li class="mt-2 card-li">Granizo</li>
+                        <li class="mt-2 card-li">Daños parciales por inundación</li>
+                    </ul>
+                </div>
+
                 <div>
                     <p>$<span class="totalCards">${estandarValue = (Number.parseInt((user.value / user.year))* 15)}</span>/mes</p>
                 </div>
@@ -86,7 +110,30 @@ $(document).ready(function(){
 
             $.get(usdBlue,function(datos){
                 let baseValue;
-                $('#cardBase').append(`
+                $('#cardBase').html(`
+                <div class="card-body">
+                    <p class="card-text mt-5">Te cubrimos robo, incendio y destrucción totales.</p>
+                    <a href="#" class="btn btn-warning btn-card">Contratar Online</a>
+                </div>
+                <div class="card-body">
+                    <p class="mt-5 card-plan">Este plan incluye:</p>
+                    <ul class="mt-4"">
+                        <li class="card-li">Beneficios Safer</li>
+                        <li class="mt-2 card-li">Responsabilidad Civil</li>
+                        <li class="mt-2 card-li">Incendio, daños y robo total</li>
+                    </ul>
+
+                    <p class="mt-5 card-plan">Este plan no incluye:</p>
+                    <ul class="mt-4">
+                        <li class="card-li">Daños parciales con franquicia</li>
+                        <li class="mt-2 card-li">Robo e incendio parcial</li>
+                        <li class="mt-2 card-li">Cristales</li>
+                        <li class="mt-2 card-li">Cerradura</li>
+                        <li class="mt-2 card-li">Granizo</li>
+                        <li class="mt-2 card-li">Daños parciales por inundación</li>
+                    </ul>
+                </div>
+
                 <div>
                     <p>$<span class="totalCards">${baseValue = (Number.parseInt((user.value / user.year))* 18)}</span>/mes</p>
                 </div>
@@ -100,7 +147,29 @@ $(document).ready(function(){
 
             $.get(usdBlue,function(datos){
                 let fullValue;
-                $('#cardFull').append(`
+                $('#cardFull').html(`
+                <div class="card-body">
+                    <p class="card-text mt-5">Además te cubrimos granizo, cristales, cerraduras y ruedas.</p>
+                    <a href="#" class="btn btn-warning btn-card">Contratar Online</a>
+                </div>
+                <div class="card-body">
+                    <p class="mt-5 card-plan">Este plan incluye:</p>
+                    <ul class="mt-4"">
+                        <li class="card-li">Beneficios Safer</li>
+                        <li class="mt-2 card-li">Responsabilidad Civil</li>
+                        <li class="mt-2 card-li">Robo e incendio parcial</li>
+                        <li class="mt-2 card-li">Incendio, daños y robo total</li>
+                        <li class="mt-2 card-li">Cristales</li>
+                        <li class="mt-2 card-li">Cerradura</li>
+                        <li class="mt-2 card-li">Granizo</li>
+                        <li class="mt-2 card-li">Daños parciales por inundación</li>
+                    </ul>
+
+                    <p class="mt-5 card-plan">Este plan no incluye:</p>
+                    <ul class="mt-4">
+                        <li class="card-li">Daños parciales con franquicia</li>
+                    </ul>
+                    </div>
                 <div>
                     <p>$<span class="totalCards">${fullValue = (Number.parseInt((user.value / user.year))* 21)}</span>/mes</p>
                 </div>
@@ -114,7 +183,27 @@ $(document).ready(function(){
 
             $.get(usdBlue,function(datos){
                 let safestValue;
-                $('#cardSafest').append(`
+                $('#cardSafest').html(`
+                <div class="card-body">
+                    <p class="card-text mt-5">Te cubrimos los daños parciales superiores a la franquicia que elijas.</p>
+                    <a href="#" class="btn btn-warning btn-card">Contratar Online</a>
+                    </div>
+                <div class="card-body card-safest">
+                    <p class="mt-5 card-plan">Este plan incluye:</p>
+                    <ul class="mt-4">
+                        <li class="card-li">Beneficios Safer</li>
+                        <li class="mt-2 card-li">Responsabilidad Civil</li>
+                        <li class="mt-2 card-li">Daños parciales con franquicia</li>
+                        <li class="mt-2 card-li">Robo e incendio parcial</li>
+                        <li class="mt-2 card-li">Incendio,daños y robo total</li>
+                        <li class="mt-2 card-li">Cristales</li>
+                        <li class="mt-2 card-li">Cerradura</li>
+                        <li class="mt-2 card-li">Granizo</li>
+                        <li class="mt-2 card-li">Daños parciales por inundación</li>
+                    </ul>
+                    </ul>
+                </div>
+
                 <div>
                     <p>$<span class="totalCards">${safestValue = (Number.parseInt((user.value / user.year))* 24)}</span>/mes</p>
                 </div>

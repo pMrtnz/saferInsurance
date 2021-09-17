@@ -46,45 +46,42 @@
     </nav>
 
     <div class="container-xs container-banner">
-        <div class="col-12">
-            <img  data-aos="fade-left" data-aos-duration="2500" class="img-fluid" src="assets/img/banner.jpg" alt="banner">
-        </div>
-    </div>
-
-    <div class="container">
-        <div class="row slogan">
-            <div class="col-12">
-                <p class="fw-bold display-1" data-aos="fade-down" data-aos-duration="3000">Safer Insurance</p>
-            </div>
-            <div class="col-12">
+        <div class="row d-flex align-items-center imgTop">
+            <div class="col-lg-6 col-md-6 col-sm-12 fullSlogan">
+                <p class="fw-bold display-1 slogan" data-aos="fade-down" data-aos-duration="3000">Safer Insurance</p>
                 <p class="fst-italic fw-light fs-5" data-aos="fade-right" data-aos-duration="3000"><span>El mejor seguro para tu auto esta acá</span></p>
             </div>
+
+            <div class="col-lg-6 col-md-6 col-sm-12 d-flex flex-row-reverse">
+                <img data-aos="fade-left" data-aos-duration="2500" class="img-fluid imgBanner" src="assets/img/banner2.jpg" alt="banner">
+            </div>
         </div>
     </div>
+    
 
     <div class="container q__mod">
         <div class="row">
             <div class="col-12 text-center">
                 <p class="fw-bold h1">¿Cómo contratar <span>Safer</span>?</p>
-                <p class="fs-5">¡Es súper rápido y seguro!</p>
+                <p class="fs-5 mb-0">¡Es súper rápido y seguro!</p>
             </div>
         </div>
     </div> 
     <div class="container mt-4">
         <div class="row text-center">
-            <div class="col-3">
+            <div class="col-lg-3 col-md-6 col-sm-12 mt-4">
                 <img src="assets/img/sports-car.png" alt="auto" class="icons__anim">
                 <p class="mt-5 fs-5">Registrá tu vehiculo.</p>
             </div>
-            <div class="col-3">
+            <div class="col-lg-3 col-md-6 col-sm-12 mt-4">
                 <img src="assets/img/bill.png" alt="servicio" class="icons__anim">
                 <p class="mt-5 fs-5">Elegí el mejor plan para vos.</p>
             </div>
-            <div class="col-3">
+            <div class="col-lg-3 col-md-6 col-sm-12 mt-4">
                 <img src="assets/img/credit-card.png" alt="tarjeta" class="icons__anim">
                 <p class="mt-5 fs-5">Cargá tu metodo de pago.</p>
             </div>
-            <div class="col-3">
+            <div class="col-lg-3 col-md-6 col-sm-12 mt-4">
                 <img src="assets/img/valet.png" alt="llave" class="icons__anim">
                 <p class="mt-5 fs-5">¡Y listo! Ya tenes tu seguro.</p>
             </div>
@@ -93,10 +90,10 @@
     
     <div class="container-fluid gradient" id="backgroundImg">
         <div class="row img-sl">
-            <div class="col-4">
+            <div class="col-lg-4 col-md-6 col-sm-12 imgSl">
                 <img class="img-fluid img-shadow" src="assets/img/carpic1.jpg" alt="car1" data-aos="fade-right" data-aos-duration="1500">
             </div>
-            <div class="col-8 h2 img__text">
+            <div class="col-lg-8 col-md-6 col-sm-12 h2 img__text">
                 <p data-aos="zoom-in" data-aos-duration="1000">Contamos con los mejores beneficios<br>para vos y tu auto.</p>
             </div>
         </div>
@@ -108,22 +105,22 @@
                 <p class="fw-bold h1 wh_mod"><span>¿</span>Por qué elegirnos<span>?</span></p>
             </div>
             <div class="row text-center mt-4">
-                <div class="col-3">
+                <div class="col-lg-3 col-md-6 col-sm-12">
                     <img src="assets/img/buscar.png" alt="letrachica" class="icons__anim">
                     <p class="mt-5 fs-5 fw-bold">Sin letra chica.</p>
                     <p>Tu seguro con nosotros es facil de entender. Si algo no es claro, preguntanos</p>
                 </div>
-                <div class="col-3">
+                <div class="col-lg-3 col-md-6 col-sm-12">
                     <img src="assets/img/support.png" alt="ayuda" class="icons__anim">
                     <p class="mt-5 fs-5 fw-bold">Estamos siempre.</p>
                     <p>Contactanos a través de nuestras redes, mail o telefono.</p>
                 </div>
-                <div class="col-3">
+                <div class="col-lg-3 col-md-6 col-sm-12">
                     <img src="assets/img/tow-truck.png" alt="grua" class="icons__anim">
                     <p class="mt-5 fs-5 fw-bold">La asistencia más rápida.</p>
                     <p>Contamos con el servicio de grúas más rápido. Tiempo promedio de 30'</p>
                 </div>
-                <div class="col-3">
+                <div class="col-lg-3 col-md-6 col-sm-12">
                     <img src="assets/img/price-list.png" alt="planes" class="icons__anim">
                     <p class="mt-5 fs-5 fw-bold">Planes insuperables.</p>
                     <p>Coberturas y servicios únicos a un precio increíble.</p>
@@ -169,7 +166,7 @@
             <div id="datosForm"></div>
             
             <div class="row">
-                <button id="btnEnviar" class="btn-grad" type="submit">Cotizar</button>
+                <button id="btnCotizar" class="btn-grad" type="submit">Cotizar</button>
             </div>
         </form>
     </div>
@@ -190,30 +187,7 @@
                 <div class="card-header">
                     <strong>Estándar:</strong><br>Responsabilidad Civil
                 </div>
-                <div id="cardEstandar">
-                    <div class="card-body">
-                    <p class="card-text mt-5">Te cubrimos cualquier situacion ante responsabilidad civil.</p>
-                    <a href="#" class="btn btn-warning btn-card">Contratar Online</a>
-                    </div>
-                    <div class="card-body">
-                    <p class="mt-5 card-plan">Este plan incluye:</p>
-                    <ul class="mt-4"">
-                        <li class="card-li">Beneficios Safer</li>
-                        <li class="mt-2 card-li">Responsabilidad Civil</li>
-                    </ul>
-
-                    <p class="mt-5 card-plan">Este plan no incluye:</p>
-                    <ul class="mt-4">
-                        <li class="card-li">Daños parciales con franquicia</li>
-                        <li class="mt-2 card-li">Robo e incendio parcial</li>
-                        <li class="mt-2 card-li">Incendio, daños y robo total</li>
-                        <li class="mt-2 card-li">Cristales</li>
-                        <li class="mt-2 card-li">Cerradura</li>
-                        <li class="mt-2 card-li">Granizo</li>
-                        <li class="mt-2 card-li">Daños parciales por inundación</li>
-                    </ul>
-                    </div>
-                </div>
+                <div id="cardEstandar"></div>
                 </div>
             </div>
             
@@ -223,30 +197,7 @@
                 <div class="card-header">
                     <strong>Base:</strong><br>Terceros Básico
                 </div>
-                <div id="cardBase">
-                    <div class="card-body">
-                    <p class="card-text mt-5">Te cubrimos robo, incendio y destrucción totales.</p>
-                    <a href="#" class="btn btn-warning btn-card">Contratar Online</a>
-                    </div>
-                    <div class="card-body">
-                    <p class="mt-5 card-plan">Este plan incluye:</p>
-                    <ul class="mt-4"">
-                        <li class="card-li">Beneficios Safer</li>
-                        <li class="mt-2 card-li">Responsabilidad Civil</li>
-                        <li class="mt-2 card-li">Incendio, daños y robo total</li>
-                    </ul>
-
-                    <p class="mt-5 card-plan">Este plan no incluye:</p>
-                    <ul class="mt-4">
-                        <li class="card-li">Daños parciales con franquicia</li>
-                        <li class="mt-2 card-li">Robo e incendio parcial</li>
-                        <li class="mt-2 card-li">Cristales</li>
-                        <li class="mt-2 card-li">Cerradura</li>
-                        <li class="mt-2 card-li">Granizo</li>
-                        <li class="mt-2 card-li">Daños parciales por inundación</li>
-                    </ul>
-                    </div>
-                </div>
+                <div id="cardBase"></div>
                 </div>
             </div>
 
@@ -255,30 +206,7 @@
                 <div class="card-header" id="headerFull">
                     <strong>Full:</strong><br>Terceros Completo
                 </div>
-                <div id="cardFull">
-                    <div class="card-body">
-                    <p class="card-text mt-5">Además te cubrimos granizo, cristales, cerraduras y ruedas.</p>
-                    <a href="#" class="btn btn-warning btn-card">Contratar Online</a>
-                    </div>
-                    <div class="card-body">
-                    <p class="mt-5 card-plan">Este plan incluye:</p>
-                    <ul class="mt-4"">
-                        <li class="card-li">Beneficios Safer</li>
-                        <li class="mt-2 card-li">Responsabilidad Civil</li>
-                        <li class="mt-2 card-li">Robo e incendio parcial</li>
-                        <li class="mt-2 card-li">Incendio, daños y robo total</li>
-                        <li class="mt-2 card-li">Cristales</li>
-                        <li class="mt-2 card-li">Cerradura</li>
-                        <li class="mt-2 card-li">Granizo</li>
-                        <li class="mt-2 card-li">Daños parciales por inundación</li>
-                    </ul>
-
-                    <p class="mt-5 card-plan">Este plan no incluye:</p>
-                    <ul class="mt-4">
-                        <li class="card-li">Daños parciales con franquicia</li>
-                    </ul>
-                    </div>
-                </div>
+                <div id="cardFull"></div>
                 </div>
             </div>
 
@@ -287,27 +215,7 @@
                 <div class="card-header">
                     <strong>Safest:</strong><br>Todo Riesgo
                 </div>
-                <div id="cardSafest">
-                    <div class="card-body">
-                    <p class="card-text mt-5">Te cubrimos los daños parciales superiores a la franquicia que elijas.</p>
-                    <a href="#" class="btn btn-warning btn-card">Contratar Online</a>
-                    </div>
-                    <div class="card-body card-safest">
-                    <p class="mt-5 card-plan">Este plan incluye:</p>
-                    <ul class="mt-4">
-                        <li class="card-li">Beneficios Safer</li>
-                        <li class="mt-2 card-li">Responsabilidad Civil</li>
-                        <li class="mt-2 card-li">Daños parciales con franquicia</li>
-                        <li class="mt-2 card-li">Robo e incendio parcial</li>
-                        <li class="mt-2 card-li">Incendio,daños y robo total</li>
-                        <li class="mt-2 card-li">Cristales</li>
-                        <li class="mt-2 card-li">Cerradura</li>
-                        <li class="mt-2 card-li">Granizo</li>
-                        <li class="mt-2 card-li">Daños parciales por inundación</li>
-                    </ul>
-                    </ul>
-                    </div>
-                </div>
+                <div id="cardSafest"></div>
                 </div>
             </div>
             </div>

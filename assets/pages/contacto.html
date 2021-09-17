@@ -32,7 +32,7 @@
           <a class="navbar-brand" href="#">
               <img data-aos="fade-right" data-aos-duration="2500" class="logo_mod" src="../img/logo1.png" alt="logo">
           </a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation" style="border-color:black;background-color: #FFCF59;">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse fs-5" id="navbarNavAltMarkup">
@@ -52,23 +52,65 @@
     <div class="container">
       <div class="row">
         <div class="col">
-          <p class="display-6 text-center fw-bold">¡Contactanos!</p>
+          <p class="display-6 text-center fw-bold mb-5">¡Contactanos!</p>
         </div>
       </div>
     </div>
 
-    <div class="container">
-      <div class="row">
+    <div class="container-fluid">
+      <div class="row contactform">
         <div class="col-sm-12 col-lg-6 d-flex align-items-center justify-content-center">
-          <img class="img-fluid imgForm" src="../img/chatBot.svg" alt="contacto">
+          <div>
+            <img class="img-fluid imgForm" src="../img/chatBot.svg" alt="contacto">
+          </div>
         </div>
-      </div>
-      
-      <div class="col-sm-12 col-lg-6 contact__form mt-5">
         
+        <div class="col-sm-12 col-lg-6 d-flex align-items-center justify-content-center" id="formMq">
+          <form id="contactoForm" class="formwidth">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-outline">
+                  <input type="text" id="contactName" class="form-control" aria-describedby="textExample1"/>
+              </div>
+              <div id="textExample1" class="form-text">Ingrese su nombre.</div>
+              </div>
+
+              <div class="col-md-6">
+                <div class="form-outline">
+                  <input type="text" id="contactSurname" class="form-control" aria-describedby="textExample1"/>
+              </div>
+              <div id="textExample1" class="form-text">Ingrese su apellido.</div>
+              </div>
+            </div>
+
+            <div class="row mt-5">
+                <div class="form-outline">
+                    <input type="email" id="contactEmail" class="form-control" aria-describedby="textExample1"/>
+                </div>
+                <div id="textExample1" class="form-text">Ingrese su correo electronico.</div>
+            </div>
+
+            <div class="row mt-5">
+                <div class="form-outline">
+                    <input type="" id="contactSubject" class="form-control" aria-describedby="textExample1" min="1850" max="2022"/>
+                </div>
+                <div id="textExample1" class="form-text">Ingrese una breve descripción de su consulta.</div>
+            </div>
+
+            <div class="row mt-5">
+                <textarea class="form-control messageInput"  aria-describedby="textExample1" id="contactMessage" cols="15" rows="4"></textarea>
+                <div id="textExample1" class="form-text">Ingrese su mensaje.</div>
+            </div>
+            
+            <div class="row">
+                <button id="btnSend" class="btn-grad" type="submit">Enviar</button>
+            </div>
+          </form>
+        </div>
+
+        <div id="contact"></div>
       </div>
     </div>
-
 
     <div class="mt-5">
         <footer class="text-white text-center text-lg-start" style="background-color: #23242a;">

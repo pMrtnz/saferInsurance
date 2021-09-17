@@ -35,20 +35,21 @@ span{
 
 
 /* Banner/Slogan */
+.q__mod{
+    margin-top: 150px;
+}
+.imgBanner{
+    height: 800px;
+}
+.fullSlogan{
+    text-align: center;
+}
 .slogan{
-    position: relative;
-    bottom: 550px; right: 225px;
     color: white;
 }
 
 .container-banner{
     background-color: #000;
-}
-
-.q__mod{
-    margin-top: 40px;
-    position: relative;
-    bottom: 90px;
 }
 
 .icons__anim {
@@ -260,4 +261,51 @@ span{
 }
 #headerFull{
     background-color: #ffc107;
+}
+
+@media (max-width: 991px) {
+    .fullSlogan{
+        margin: 100px 0 150px 0;
+    }
+    #quienesSomos{
+        margin-top: 100px;
+    }
+    .wh_mod{
+        margin-top: 100px;
+    }
+    #formMq{
+        margin-top: 100px;
+    }
+}
+
+@media (max-width: 767px) {
+    .fullSlogan{
+        margin: 100px 0 150px 0;
+    }
+    .img-sl{
+        margin: 80px 0 80px 0;
+    }
+    .img__text{
+        margin-top: 60px;
+    }
+    .imgTop{
+        display: flex;
+        flex-wrap: wrap-reverse;
+    }
+    .imgMq{
+        margin: 80px 0 80px 0;
+    }
+    #contactSurname{
+        margin-top: 45px;
+    }
+}
+
+@media (max-width: 576px) {
+    .fullSlogan{
+        margin: 100px 0 150px 0;
+    }
+    .textValores{
+        text-align: center;
+        width: 100%;
+    }
 }
